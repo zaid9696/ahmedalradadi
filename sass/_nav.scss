@@ -1,0 +1,183 @@
+.nav{
+
+    grid-column: center-start / center-end;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__logo{
+
+        img{
+            width: 270px;
+            @media screen and (max-width: 533px) {
+                width: 140px;
+            }
+        }
+
+    }
+    &__wrap{
+
+        @media screen and (max-width: 972px) {
+            display: none;
+            position: fixed;
+            width: 75vw;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 888;
+            transform: translate(-103%, 0px);
+        }
+
+        @media screen and (max-width: 500px) {
+                    
+            width: 83vw;
+
+        }
+
+    }
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 972px) {
+            justify-content: flex-end;
+        }
+        @media screen and (max-width: 972px) {
+
+            .menu-header-menu-container{
+               
+                box-shadow: 3px 0px 7px 1px #32373c7d;
+                background: rgb(106, 29, 29);
+                background: linear-gradient(128deg, rgba(106, 29, 29, 0.76) 0%, rgba(255, 122, 0, 0.86) 100%);
+                backdrop-filter: blur(6px);
+               
+                width: 100%;
+                height: 100%;
+                ul{
+
+                    height: 100%;
+                    justify-content: center;
+                    flex-direction: column;
+
+                    li{
+                        list-style: none;
+                        font-size: 4rem;
+                         margin-left: 0px;
+                        margin-bottom: 3rem;
+                        @media screen and (max-width: 533px) {
+                            font-size: 3.4rem;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        ul{
+            display: flex;
+            align-items: center;
+            margin-right: 45px;
+            @media screen and (max-width: 1200px) {
+                margin-right: 0;
+            }
+        }
+
+        .current-menu-item{
+            color: $primary-color;
+            padding-bottom: 3px;
+            border-bottom: 1px solid $primary-color;
+            @media screen and (max-width: 972px) {
+
+                border-bottom: 2px solid #fff;
+
+            }
+            a{
+                color: $primary-color;
+                @media screen and (max-width: 972px) {
+
+                    color:#fff;
+                }
+            }
+        }
+
+        
+
+        li{
+            list-style: none;
+            font-size: 3rem;
+            margin-left: 50px;
+            a{
+            text-decoration: none;
+            color: $secondary-color;
+            @media screen and (max-width: 972px) {
+
+            color: #d4d4d4;
+
+            }
+            transition: all 0.2s ease-in-out;
+            
+        }
+
+        }
+        li:not(.current-menu-item){
+            a{
+                &:hover{
+                    color: $primary-color;
+                    padding-bottom: 3px;
+                    border-bottom: 1px solid $primary-color;
+                    @media screen and (max-width: 972px) {
+                        
+                        color: #fcb900;
+                        border-bottom: 2px solid;
+            
+                    }
+                }
+            }
+
+        }
+    
+    }
+
+    &__search{
+        display: flex;
+        justify-content: flex-end;
+        img{
+
+            width: 44px;
+            cursor: pointer;
+            @media screen and (max-width: 533px) {
+                width: 35px;
+            }
+        }
+    }
+
+    &__menuicon{
+
+        margin-left: 3rem;
+        display: none;
+        @media screen and (max-width: 972px) {
+            display: block;
+        }
+        img{
+            width: 40px;
+            cursor: pointer;
+            @media screen and (max-width: 533px) {
+                width: 35px;
+            }
+        }
+    }
+
+    &__closeicon{
+        display: none;
+        position: fixed;
+        z-index: 889;
+        right: 6%;
+        top: 33px;
+        // @media screen and (max-width: 972px) {display: block;}
+        img{
+            width: 31px;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.page__thumbnail{
+
+    grid-column: full-start / full-end;
+    height: 506px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -66px;
+    margin-top: 20px;
+    @media screen and (max-width: 650px) {
+        height: 400px;
+    }
+}
+
+.page__title{
+
+    grid-column: center-start / center-end;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    color: #327178;
+
+}
+
+.page__content{
+
+    grid-column: center-start / center-end;
+
+    p{
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 1.8rem;
+        color: #327178;
+        @media screen and (max-width: 555px) {
+            font-size: 2rem;
+
+        }
+    }
+
+
+    form.wpcf7-form{
+
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        background-color: #f7f5f5;
+        padding: 2rem;    
+        border: 2px solid #3271782b;
+        margin-bottom: 2rem;
+        @media screen and (max-width: 650px) {
+            justify-items: normal;
+            padding-right: 23px;
+        }
+        p{
+            text-align: right !important;
+        }
+
+        @media screen and (max-width: 555px) {
+            display: block;
+        }
+
+        label{
+            text-align: right;
+            font-size: 1.7rem;
+            color: #545454;
+        }
+        p:nth-child(2){
+
+            @media screen and (max-width: 555px) {
+               margin-bottom: 20px;
+
+           }
+        }
+        p:nth-child(2),
+        p:nth-child(3){
+            width: 79%;
+            @media screen and (max-width: 555px) {
+                 width: 89%;
+
+            }
+        }
+        p:nth-child(4),
+        p:nth-child(5){
+            width: 89%;
+            margin-top: 20px;
+        }
+      
+        p:nth-child(4),
+        p:nth-child(5),
+        p:nth-child(6){
+
+            grid-column: 1 / 4;
+        }
+        p:nth-child(6){text-align: center;}
+
+        .wpcf7-email,
+        .wpcf7-text{
+
+            width: 100%;
+            height: 40px;
+            border: 3px solid #327178;
+            border-radius: 2px;
+            margin-top: 3px;
+            padding: 0 15px;
+            direction: rtl;
+            font-size: 2rem;
+            color: #327178;
+            
+        }
+
+        .wpcf7-textarea{
+
+            width: 100%;
+            height: 276px;
+            border: 3px solid #327178;
+            padding: 15px;
+            font-size: 3rem;
+            color: #327178;
+        }
+
+        .wpcf7-submit{
+
+            padding: 0.6rem 5rem;
+            background-color: #327178;
+            color: #fff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            border: 1px solid #327178;
+            border-radius: 37px;
+            margin-top: 14px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            &:hover{
+                color: #327178;
+                background-color: transparent;
+            }
+
+
+        }
+
+        .wpcf7-response-output{
+
+            grid-column: 1 / 4;
+            width: 100%;
+            text-align: center;
+            font-size: 2rem;
+            color: #327178;
+            font-weight: bold;
+        }
+
+
+    }
+}

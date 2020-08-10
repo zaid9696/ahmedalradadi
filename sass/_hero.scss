@@ -1,0 +1,135 @@
+.hero{
+
+    grid-column: full-start / full-end;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 53%;
+    @media screen and (max-width: 850px) {
+
+        grid-template-columns: 1fr;
+    }
+    height: 375px;
+    margin-top: 30px;
+
+    &__content{
+        background-color: $primary-color;
+        display: grid;
+        grid-template-columns: [full-start] minmax(2rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 6rem) [col-start]) [center-end] minmax(2rem, 1fr) [full-end];    
+        align-items: center;
+        @media screen and (max-width: 850px) {
+
+            text-align: center;
+            margin-top: 4rem;
+            padding: 3rem 3rem;
+            padding-bottom: 4rem;
+
+        }
+        
+    }
+    &__intro{
+        grid-column: full-start / center-end;
+        @media screen and (max-width: 850px) {
+            
+            grid-column: full-start / full-end;
+        }
+        h1{
+            font-size: 5rem;
+            position: relative;
+            top: -31px;
+            color: #fff;
+            left: -14px;
+            @media screen and (max-width: 850px) {
+
+                top: 0;
+                left: 0;
+                margin-bottom: 9px;
+
+            }
+            @media screen and (max-width: 500px) {
+
+                font-size: 3.4rem;
+                margin-bottom: 1rem;
+            }
+                
+            span{
+                position: absolute;
+                right: -18%;
+                color: #ff7a00;
+                @media screen and (max-width: 850px) {
+                    position: static;
+                    right: 0;
+                    color: #005555;
+                }
+            
+            }
+        }
+        p{
+            font-size: 2.4rem;
+            margin-right: 30px;
+            color: #fff;
+            line-height: 37px;
+            @media screen and (max-width: 850px) {
+                margin-right: 0;
+                line-height: 33px;
+            }
+            @media screen and (max-width: 500px) {
+
+                font-size: 1.9rem;
+                line-height: 25px;
+            }
+        }
+
+    }
+
+    &__info{
+        display: grid;
+    grid-template-columns: [full-start] minmax(2rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 6rem) [col-start]) [center-end] minmax(2rem, 1fr) [full-end];
+
+    }
+    &__img{
+        grid-column: center-start / center-end;
+        &-overlay{
+            width: 320px;
+            height: 320px;
+            border: 5px solid #ff7a00;
+            border-radius: 4px;
+            @media screen and (max-width: 1000px) {
+                
+                width: 270px;
+                height: 270px;
+            }
+            @media screen and (max-width: 500px) {
+
+                width: 230px;
+                height: 230px;
+            }
+           
+        }
+        img{
+            height: 320px;
+            position: relative;
+            top: 23px;
+            right: 22px;
+            border-radius: 4px;
+            box-shadow: 0px 5px 9px -1px #0000006b;
+            @media screen and (max-width: 1000px) {
+                
+                width: 270px;
+                height: 270px;
+            }
+            @media screen and (max-width: 555px) {
+                top: 14px;
+                right: 15px;
+            }
+
+            @media screen and (max-width: 500px) {
+
+                width: 230px;
+                height: 230px;
+            }
+        
+        }
+    }
+
+}

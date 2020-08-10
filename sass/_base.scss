@@ -1,0 +1,33 @@
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
+
+$primary-color:#FF7A00;
+$secondary-color:#545454;
+$third-color:#327178;
+
+html{
+
+    font-family: 'Tajawal', sans-serif;
+    font-size: 62.2%;
+    @media screen and (max-width: 1200px) {
+        
+        font-size: 50%;
+    }
+    box-sizing: border-box;
+    
+
+}
+
+
+body{
+
+    display: grid;
+    grid-template-columns: [full-start] minmax(2rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-start]) [center-end] minmax(2rem, 1fr) [full-end];
+    
+}

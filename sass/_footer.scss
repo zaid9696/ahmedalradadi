@@ -1,0 +1,90 @@
+.footer{
+
+
+    grid-column: full-start / full-end;
+    background-color: $third-color;
+    display: grid;
+    grid-template-columns: [full-start] minmax(2rem,1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-start]) [center-end] minmax(2rem, 1fr) [full-end];
+    padding: 2rem 0;
+    padding-bottom: 0;
+
+    &__container{
+
+        grid-column: center-start / center-end;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        margin-bottom: 7px;
+        @media screen and (max-width: 500px) {
+
+            grid-template-columns: 1fr;
+            row-gap: 17px;
+            text-align: center;
+
+
+        }
+
+        .menu-footer-container{
+            display: flex;
+            justify-content: flex-end;
+            @media screen and (max-width: 500px) {
+
+                justify-content: center;
+    
+    
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+
+                li{
+
+                    margin-right: 1.5rem;
+
+                    a{
+                        
+                        font-size: 2rem;
+                        color: #fff;
+                        text-decoration: none;
+                        font-weight: 100;
+                        transition: all 0.2s ease-in-out;
+                        &:hover{
+                            color: $primary-color;
+                            font-weight: bold;
+
+                        }
+                    }
+                }
+            }
+        }
+    
+
+    }
+
+    &__logo{
+        font-size: 2rem;
+        color: #fff;
+        font-weight: 100;
+    }
+
+    &__zaid{
+
+        grid-column: full-start / full-end;
+        margin-top: 1rem;
+        border-top: 1px solid #ffffff47;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        font-size: 1.5rem;
+        color: #ffffffa3;
+        letter-spacing: 1px;
+        a{
+            color: #fff;
+            font-size: 1.7rem;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+
+}

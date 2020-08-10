@@ -1,0 +1,33 @@
+.not-found{
+
+
+    grid-column: center-start  / center-end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 672px) {
+        grid-template-columns: 1fr;
+
+     }
+    margin: 3rem 0;
+    background-color: #fbfbfb;
+    
+    &__content{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2{
+            font-size: 4.3rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            color: #327178;
+        }
+        a{
+            font-size: 2.7rem;
+            color: #af5402;
+        }
+    }
+}
